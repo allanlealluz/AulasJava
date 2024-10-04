@@ -1,7 +1,15 @@
 package Aula3.exemplos;
 
-public class Exemplo4{
-    public static void main(String[] args){
+public class Exemplo4 {
+    public static void main(String[] args) {
+        int num1 = 2, num2 = 4, num3 = 6, num4 = 8;
+        boolean resposta;
+
+        resposta = num1 < num2 && num3 != num4;
+        System.out.println(num1 + " < " + num2 + " && " + num3 + "!=" + num4 + " = " + resposta);
+        resposta = num1 < num2 || num3 != num4;
+        System.out.println(num1 + " < " + num2 + " || " + num3 + "!=" + num4 + " = " + resposta);
+
 
     }
 }
