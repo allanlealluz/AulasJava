@@ -22,5 +22,6 @@ public class Exemplo4 {
             default:
                 System.out.println("Inválido");
         }
+        scanner.close();
     }
 }
