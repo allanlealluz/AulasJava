@@ -9,7 +9,7 @@ public class Exemplo3 {
         System.out.println("Digite sua idade");
         idade = scanner.nextInt();
         if(idade >0 && idade <= 12){
-            System.out.println("Você é criança ");
+            System.out.println("Você é criança "); //aa
         }else if(idade > 12 && idade <=17){
             System.out.println("Você é adolescente");
         }else if(idade > 17 && idade < 65){
