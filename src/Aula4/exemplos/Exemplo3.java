@@ -14,8 +14,10 @@ public class Exemplo3 {
             System.out.println("Você é adolescente");
         }else if(idade > 17 && idade < 65){
             System.out.println("Você é adulto");
+        }else if(idade >=65){
+            System.out.println("Você é idoso");
         }else{
-            System.out.println("Idoso");
+            System.out.println("Idade invalida");
         }
         
     }
