@@ -13,7 +13,7 @@ public class Exemplo3 {
         }else if(idade > 12 && idade <=17){
             System.out.println("Você é adolescente");
         }else if(idade > 17 && idade < 65){
-            System.out.println("Você é adulto");
+            System.out.println("Você é adulto");//aaa
         }else if(idade >=65){
             System.out.println("Você é idoso");
         }else{
