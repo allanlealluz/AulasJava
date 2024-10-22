@@ -1,6 +1,6 @@
-package Aula4.exemplos;
+package Aula5.Exemplos;
 
-public class Exemplo6 {
+public class Exemplo1 {
     public static void main(String[] args) {
         int x= 60;
         boolean r;
