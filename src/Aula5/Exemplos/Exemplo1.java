@@ -1,10 +1,19 @@
 package Aula5.Exemplos;
 
+import java.util.Scanner;
+
 public class Exemplo1 {
     public static void main(String[] args) {
-        int x= 60;
-        boolean r;
+        Scanner scanner = new Scanner(System.in);
 
-        r = x > 50 ? true : false;
+        int idade = 0;
+
+        while(idade < 18){
+            System.out.println("Digite sua idade? ");
+            idade = scanner.nextInt();
+            System.out.println(idade);
+        }
+        System.out.println("VocÊ é maior de idade");
+        scanner.close();
     }
 }
