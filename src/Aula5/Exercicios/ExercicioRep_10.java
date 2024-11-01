@@ -7,7 +7,7 @@ public class ExercicioRep_10 {
         Scanner scanner= new Scanner(System.in);
         int num = 0,par = 0, impar = 0;
         while(num > 0){
-
+            
         }
     }
 }
