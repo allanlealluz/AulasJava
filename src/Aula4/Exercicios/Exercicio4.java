@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Exercicio4 {
     public static void main(String[] args) {
-        int vendasFunc; double Comission;
+        int vendasFunc;double Comission;
         Scanner scanner = new Scanner(System.in);
         vendasFunc = scanner.nextInt();
 
