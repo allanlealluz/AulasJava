@@ -1,6 +1,6 @@
-package Aula6.Exemplos;
+package Aula6.Exercicios;
 
-public class Exemplo7 {
+public class Exercicio7 {
     public static void main(String[] args) {
         int [][] matrizNumeros = {
                 {1,2,3},

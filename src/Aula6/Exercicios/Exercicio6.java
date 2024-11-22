@@ -1,11 +1,10 @@
-package Aula6.Exemplos;
+package Aula6.Exercicios;
 
-public class Exemplo7 {
+public class Exercicio6 {
     public static void main(String[] args) {
         int [][] matrizNumeros = {
-                {1,2,3},
-                {3,4,2},
-                {6,7,8}
+                {1,2},
+                {3,45},
         };
         for (int linha = 0; linha < matrizNumeros.length;linha++) {
             for (int coluna = 0; coluna < matrizNumeros[linha].length; coluna++)
