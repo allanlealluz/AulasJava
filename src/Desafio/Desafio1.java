@@ -9,10 +9,10 @@ public class Desafio1 {
         int qtdPessoas = scanner.nextInt();
         scanner.nextLine();
         String[] cabecalho = {"ID", "NOME", "TELEFONE", "EMAIL"};
-        String[][] matrizCadastro = new String[qtdPessoas][cabecalho.length];
+        String[][] matrizCadastro = new String[qtdPessoas+1][cabecalho.length];
         matrizCadastro[0] = cabecalho;
 
-        for (int linha = 1; linha < qtdPessoas; linha++) {
+        for (int linha = 1; linha <= qtdPessoas; linha++) {
             System.out.println("Preencha os dados a seguir: ");
             System.out.println("ID -"+ linha);
             matrizCadastro[linha][0] = String.valueOf(linha);
@@ -22,7 +22,11 @@ public class Desafio1 {
             matrizCadastro[linha][2]= scanner.nextLine();
             System.out.println("Email:");
             matrizCadastro[linha][3]= scanner.nextLine();
-
+        }
+        for(String[] linha : matrizCadastro){
+            for(String Dado : linha){
+                System.out.println(Dado);
+            }
         }
     }
 }
