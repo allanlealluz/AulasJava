@@ -13,28 +13,32 @@ public class Desafio2 {
                 |   4 - Deletar Usuário 
                 |   5 - Sair           
                 """;
-        System.out.println(menu);
         int opcao = scanner.nextInt();
+        do {
+        System.out.println(menu);
+        opcao = scanner.nextInt();
         scanner.nextLine();
-        switch (opcao){
-            case 1:
-                exibirUsuario();
-                break;
-            case 2:
-                CadastrarUsuario();
-                break;
-            case 3:
-                atualizarUsuario();
-                break;
-            case 4:
-                deletarUsuario();
-                break;
-            case 5:
-                break;
-            default:
-                System.out.println("Erro");
-                break;
-        }
+
+            switch (opcao) {
+                case 1:
+                    exibirUsuario();
+                    break;
+                case 2:
+                    CadastrarUsuario();
+                    break;
+                case 3:
+                    atualizarUsuario();
+                    break;
+                case 4:
+                    deletarUsuario();
+                    break;
+                case 5:
+                    break;
+                default:
+                    System.out.println("Erro");
+                    break;
+            }
+        }while(opcao != 5);
     }
     public static void exibirUsuario(){
         System.out.println("Exibir");
