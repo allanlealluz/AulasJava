@@ -14,19 +14,24 @@ public class Desafio1 {
 
         for (int linha = 1; linha <= qtdPessoas; linha++) {
             System.out.println("Preencha os dados a seguir: ");
-            System.out.println("ID -"+ linha);
+            System.out.println("ID -" + linha);
             matrizCadastro[linha][0] = String.valueOf(linha);
             System.out.println("Nome:");
-            matrizCadastro[linha][1]= scanner.nextLine();
+            matrizCadastro[linha][1] = scanner.nextLine();
             System.out.println("Telefone:");
-            matrizCadastro[linha][2]= scanner.nextLine();
+            matrizCadastro[linha][2] = scanner.nextLine();
             System.out.println("Email:");
-            matrizCadastro[linha][3]= scanner.nextLine();
+            matrizCadastro[linha][3] = scanner.nextLine();
         }
+        String tabela = "";
         for(String[] linha : matrizCadastro){
-            for(String Dado : linha){
-                System.out.println(Dado);
+            for (int coluna = 0; coluna < linha.length; coluna++) {
+                tabela += linha[coluna]+"\t"+"\t";
             }
+            tabela += "\n";
+            }
+        System.out.println(tabela);
+        scanner.close();
         }
     }
-}
+
