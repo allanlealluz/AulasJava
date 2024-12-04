@@ -58,7 +58,6 @@ public class Desafio2 {
             novaMatriz[i] = matrizCadastro[i];
         }
 
-        // Adicionar novos usuários.
         for (int i = matrizCadastro.length; i < novaMatriz.length; i++) {
             novaMatriz[i] = new String[cabecalho.length];
             novaMatriz[i][0] = String.valueOf(i); // ID.
