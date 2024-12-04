@@ -4,7 +4,7 @@ import java.io.File;
 
 public class Exemplo1 {
     public static void main(String[] args) {
-        File arquivo = new File("C:\\Users\\Aluno\\Documents\\Allan\\AulasJava\\src\\Aula8\\Exemplos\\arquivo.txt");
+        File arquivo = new File("C:\\Users\\Aluno\\Documents\\Allan\\AulasJava2\\src\\Aula8\\Exemplos\\arquivo.txt");
 
         if(arquivo.exists()){
             System.out.println("O arquivo já existe");
