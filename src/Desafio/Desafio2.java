@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Desafio2 {
     static String[] cabecalho = {"ID", "NOME", "TELEFONE", "EMAIL"};
-    static String[][] matrizCadastro;
+    static String[][] matrizCadastro = {{"",""}};
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class Desafio2 {
                 |   5 - Sair           
                 """;
 
-        matrizCadastro = new String[0][cabecalho.length];
+        matrizCadastro[0] = cabecalho;
 
         int opcao;
         do {
@@ -37,16 +37,26 @@ public class Desafio2 {
     }
 
     public static void exibirUsuario() {
+        StringBuilder tabela = new StringBuilder();
         if (matrizCadastro.length == 0) {
             System.out.println("Nenhum usuário cadastrado.");
             return;
         }
+        for (String[] linha : matrizCadastro){
+            for (int coluna = 0; coluna < linha.length; coluna++) {
+                int tamanhoColuna = coluna == 0 ? 5 : (coluna == 2? 10 : 25);
+                tabela.append(String.format("%-"+tamanhoColuna+"s |", linha[coluna]));
+            }
+            tabela.append("\n");
+        }
+        System.out.println(tabela);
+        /*
         for (String[] linha : matrizCadastro) {
             for (String coluna : linha) {
                 System.out.print(coluna + "\t");
             }
             System.out.println();
-        }
+        }*/
     }
 
     public static void cadastrarUsuario() {
