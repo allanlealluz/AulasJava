@@ -94,18 +94,11 @@ public class Desafio2 {
             System.out.println("ID inválido.");
             return;
         }
-
-        System.out.println("Atualizando dados para o usuário ID " + id);
-        System.out.println("Digite o novo nome:");
-        matrizCadastro[id][1] = scanner.nextLine();
-
-        System.out.println("Digite o novo telefone:");
-        matrizCadastro[id][2] = scanner.nextLine();
-
-        System.out.println("Digite o novo email:");
-        matrizCadastro[id][3] = scanner.nextLine();
-
-        System.out.println("Usuário atualizado com sucesso.");
+        System.out.println(cabecalho[0]+id);
+        for (int coluna = 0; coluna < cabecalho.length; coluna++) {
+            System.out.println(cabecalho[coluna]+": ");
+            matrizCadastro[id][coluna] = scanner.nextLine();
+        }
     }
 
     public static void deletarUsuario() {
