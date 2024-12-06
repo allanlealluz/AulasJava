@@ -95,7 +95,7 @@ public class Desafio2 {
             return;
         }
         System.out.println(cabecalho[0]+id);
-        for (int coluna = 0; coluna < cabecalho.length; coluna++) {
+        for (int coluna = 1; coluna < cabecalho.length; coluna++) {
             System.out.println(cabecalho[coluna]+": ");
             matrizCadastro[id][coluna] = scanner.nextLine();
         }
