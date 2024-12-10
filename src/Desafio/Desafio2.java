@@ -111,12 +111,13 @@ public class Desafio2 {
             return;
         }
         String[][] novaMatriz = new String[matrizCadastro.length - 1][cabecalho.length];
-
-        int novaIndex = 0;
-        for (int i = 0; i < matrizCadastro.length; i++) {
+        for (int i = 0, idNovaMatriz = 0; i < matrizCadastro.length; i++) {
             if (i != id) {
-                novaMatriz[novaIndex++] = matrizCadastro[i];
+                novaMatriz[idNovaMatriz] = matrizCadastro[i];
+                novaMatriz[idNovaMatriz][0] = String.valueOf(idNovaMatriz);
+                idNovaMatriz ++;
             }
+
         }
 
         matrizCadastro = novaMatriz;
