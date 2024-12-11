@@ -8,7 +8,7 @@ public class Desafio3 {
     static String[] cabecalho = {"ID", "Nome", "Telefone", "Email"};
     static String[][] matrizCadastro = {{"", ""}};
     static Scanner scanner = new Scanner((System.in));
-    static File arquivoDADOS = new File(System.getProperty("user.home"),"Desafio"+File.separator+"bancoDeDados.txt");
+    static File arquivoDADOS = new File(System.getProperty("user.home"),"bancoDeDados.txt");
 
     public static void main(String[] args) {
         carregarDadosDoArquivo();
@@ -136,12 +136,16 @@ public class Desafio3 {
     }
 
     public static void carregarDadosDoArquivo(){
-        try(BufferedReader bufferedReader = new BufferedReader(new FileReader(arquivoDADOS))){
-            if(!arquivoDADOS.exists()){
-               if(arquivoDADOS.createNewFile()){
-                   System.out.println("Arquivo"+arquivoDADOS.getName()+" criado com sucesso");
-               }
+        if(!arquivoDADOS.exists()){
+            try {
+                if (arquivoDADOS.createNewFile()) {
+                    System.out.println("Arquivo" + arquivoDADOS.getName() + " criado com sucesso");
+                }
+            }catch (Exception e){
+                throw new RuntimeException(e);
             }
+        }
+        try(BufferedReader bufferedReader = new BufferedReader(new FileReader(arquivoDADOS))){
             String linha;
             StringBuilder conteudoArquivo = new StringBuilder();
             while ((linha = bufferedReader.readLine()) != null){
@@ -154,7 +158,7 @@ public class Desafio3 {
             for (int i = 0; i < linhaDadosUsuario.length ; i++) {
                 matrizCadastro[i] = linhaDadosUsuario[i].split(",");
             }
-        } catch (Exception e) {
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
