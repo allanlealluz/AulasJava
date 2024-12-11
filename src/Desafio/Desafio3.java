@@ -8,7 +8,7 @@ public class Desafio3 {
     static String[] cabecalho = {"ID", "Nome", "Telefone", "Email"};
     static String[][] matrizCadastro = {{"", ""}};
     static Scanner scanner = new Scanner((System.in));
-    static File arquivoDADOS = new File(System.getProperty("user.home"),"Desafio3"+File.separator+"bancoDeDados.txt");
+    static File arquivoDADOS = new File(System.getProperty("user.home"),"Desafio"+File.separator+"bancoDeDados.txt");
 
     public static void main(String[] args) {
         carregarDadosDoArquivo();
@@ -137,6 +137,11 @@ public class Desafio3 {
 
     public static void carregarDadosDoArquivo(){
         try(BufferedReader bufferedReader = new BufferedReader(new FileReader(arquivoDADOS))){
+            if(!arquivoDADOS.exists()){
+               if(arquivoDADOS.createNewFile()){
+                   System.out.println("Arquivo"+arquivoDADOS.getName()+" criado com sucesso");
+               }
+            }
             String linha;
             StringBuilder conteudoArquivo = new StringBuilder();
             while ((linha = bufferedReader.readLine()) != null){
